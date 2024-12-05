@@ -11,3 +11,6 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 // Example 2:
 // Input: flowerbed = [1,0,0,0,1], n = 2
 // Output: false
+
+// const flowerbed = [1, 0, 0, 0, 1];
+// const n = 1;
