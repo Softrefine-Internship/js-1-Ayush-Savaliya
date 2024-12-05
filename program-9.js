@@ -5,4 +5,5 @@
 obj = {};
 Object.assign(obj, { 3: 1 });
 obj[3] += 1;
+
 console.log(obj)
