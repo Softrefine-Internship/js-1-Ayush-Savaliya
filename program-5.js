@@ -12,5 +12,23 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 // Input: flowerbed = [1,0,0,0,1], n = 2
 // Output: false
 
-// const flowerbed = [1, 0, 0, 0, 1];
-// const n = 1;
+function adjacentPlots(arr, n){
+
+    for (let i = 1; i < arr.length - 1; i++) {
+        if(arr[i - 1] == 0 && arr[i + 1] == 0)
+        {
+            arr[i] = 1;
+            n--;
+        } 
+    }
+    if (n > 0) {  
+      return false;  
+    } else {
+      return true;
+    }
+}
+
+// const n = 1; 
+const n = 2; 
+const arr = [1,0,0,0,1];
+console.log(adjacentPlots(arr, n));
