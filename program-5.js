@@ -15,12 +15,15 @@ Given an integer array flowerbed containing 0's and 1's, where 0 means empty and
 function adjacentPlots(arr, n){
 
     for (let i = 1; i < arr.length - 1; i++) {
-        if(arr[i - 1] == 0 && arr[i + 1] == 0)
+      if (arr[i - 1] == 0 && arr[i + 1] == 0 && arr[i] != 1)
         {
             arr[i] = 1;
-            n--;
+          n--;
+          // console.log(n)
+          // console.log(i)
         } 
-    }
+  }
+  // console.log(n)
     if (n > 0) {  
       return false;  
     } else {
@@ -29,6 +32,8 @@ function adjacentPlots(arr, n){
 }
 
 // const n = 1; 
-const n = 2; 
-const arr = [1,0,0,0,1];
+// const n = 2; 
+const n = 3; 
+const arr =  [1,0,0,0,0,0,1,0];
+// const arr = [1,0,0,0,1];
 console.log(adjacentPlots(arr, n));

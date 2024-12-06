@@ -3,8 +3,8 @@
 // Sample input : [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Expected Output : console.log(a, "5 times")
 
-let arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-
+// let arr = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+let arr = [1,2,2,3,4,4];
 let map = new Map();
 let j;
 let i;
@@ -16,7 +16,7 @@ for (i = 0; i < arr.length; i++) {
     map.set(arr[i], 1);
   }
 }
-
+console.log(map)
 max = 0;
 k = null;
 map.forEach((val, key, map) => {
@@ -25,4 +25,9 @@ map.forEach((val, key, map) => {
     max = val;
   }
 });
-console.log(k, " : ", max, " Times");
+for (let key of map.keys()) {
+  if (map.get(key) == max) {
+     console.log(key, " : ", max, " Times");
+  }
+}
+

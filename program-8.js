@@ -10,10 +10,10 @@ let i;
 for (i= 0; i < ip.length - 1; i++){
   if ((ip[i] % 2 == 0) && (ip[i + 1] % 2 == 0)) {
     op.push(ip[i]);
-    op.push("-");
+    op.push('-');
   } else {
     op.push(ip[i]);
   }
 }
 op.push(ip[i]);
-console.log(String(op))
+console.log(op.join(""))
